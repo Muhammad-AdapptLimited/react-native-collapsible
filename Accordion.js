@@ -18,9 +18,9 @@ export default class Accordion extends Component {
     duration: PropTypes.number,
     easing: PropTypes.string,
     initiallyActiveSection: PropTypes.number,
-    activeSection: PropTypes.oneOfType([
-      PropTypes.bool, // if false, closes all sections
-      PropTypes.number, // sets index of section to open
+   activeSections: PropTypes.oneOf([
+      PropTypes.arrayOf(PropTypes.number),
+      PropTypes.string
     ]),
     underlayColor: PropTypes.string,
     touchableComponent: PropTypes.func,
